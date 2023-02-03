@@ -9,4 +9,4 @@ while x != szukanaLiczba:
         print("Podana liczba jest za mała")
     else:
         print("UDAŁO SIE !")
-        
+    
