@@ -3,9 +3,9 @@ import random
 def will_weapon_hit(weaponChance):              # stworzenie funckji czy broń trafi
     IsHitChance = random.uniform(0,100)             # losowanie liczby od 0 do 100 
     if (IsHitChance < weaponChance):
-        print('hit')
+        return "hit"
     else:
-        print('no hit')
+        return "no hit"
 
 listHit = []   #stworzenie listy w której zapisują sie wyniki 
 
@@ -16,6 +16,6 @@ while x < 100:
 
 from collections import Counter 
 dictionaryHit = Counter(listHit)
-print(listHit)
+print(dictionaryHit)
 
 
