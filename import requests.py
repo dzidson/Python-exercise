@@ -27,10 +27,7 @@ def zapis(lista):      #funkcja do zapisywania stron
             file.write(strona + "\n")
 
 
-
-
 websites = strony('websites.txt')
 true_websites = filtrowanie(websites)
-
 print(true_websites)
 zapis(true_websites)
