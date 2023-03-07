@@ -1,7 +1,9 @@
-#API
+#WEB
+
 import requests
 import json
 import pprint
+import webbrowser
 
 params = {
         'site' : "stackoverflow",
@@ -15,9 +17,10 @@ params = {
 r = requests.get("https://api.stackexchange.com/2.2/questions/", params)
 
 try:
-    tasks = r.json()
+    questions = r.json()
 except json.decoder.JSONDecodeError:
     print("Niepoprawny format")
 else:
-    pprint.pprint(tasks) 
-    
+    for question in questions["items"]:
+        pprint.pprint(question["link"]) 
+        webbrowser.open_new_tab(question["link"])
